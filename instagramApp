@@ -1,0 +1,163 @@
+from tkinter import *
+
+
+root = Tk()
+root.title("application")
+root.geometry("700x700")
+
+
+
+instagram1 = []
+instagram2 = []
+
+def login():
+    loginFrame = Frame(root, bg="#8F00FF",width=700,height=800)
+    loginFrame.pack()
+    text1 = entry1.get()
+    text2 = entry2.get()
+    instagram1.insert(1,text1)
+    instagram2.insert(1,text2)
+    
+
+    def back():
+        loginFrame.forget()
+        
+
+    btnBack = Button(loginFrame, text="BACK", bg="white", command=back)
+    btnBack.place(relx=0.05, rely=0.05, relwidth=0.1, relheight=0.05)
+
+def login1():
+    label1.config(bg="#000785")
+    label1.place(relx=0,rely=0,relheight=1,relwidth=1)
+    
+    label9 = Label(root,text="welcam",bg="#000785",fg="Red",font="50")
+    label9.place(relx=0.25,rely=0.2,relheight=0.5,relwidth=0.5)
+
+ 
+
+    
+
+
+    
+
+
+    
+button1 = Button(root,text="login",bg="#1500FA",command=login1)
+button1.place(relx=0.4,rely=0.45,relheight=0.1,relwidth=0.2)
+
+label1 = Label(root,bg="#808080")
+label1.place(relx=0.25,rely=0.1,relheight=0.5,relwidth=0.5)
+
+label2 = Label(root,text="Mail",bg="#808080",fg="red",font="30")
+label2.place(relx=0.4,rely=0.15,relheight=0.05,relwidth=0.2)
+
+label3 = Label(root,text="Passworld",bg="#808080",fg="red",font="30")
+label3.place(relx=0.4,rely=0.25,relheight=0.05,relwidth=0.2)
+
+entry1 = Entry(root,bg="black",fg="gold",font="30")
+entry1.place(relx=0.4,rely=0.2,relheight=0.05,relwidth=0.2)
+
+entry2 = Entry(root,bg="black",fg="gold",font="30")
+entry2.place(relx=0.4,rely=0.3,relheight=0.05,relwidth=0.2)
+
+
+
+instagram3 = ("Mehemmed")
+instagram4 = ("Mehemmed123")
+
+
+def signUp():
+    signUpFrame = Frame(root, bg="#2D4F1E",width=700,height=800)
+    signUpFrame.pack()
+    text1 = entry1.get()
+    text2 = entry2.get()
+    if instagram3 in text1 and instagram4 in text2:
+        def back():
+            signUpFrame.forget()
+            label1.config(bg="#808080")
+    elif instagram3 not in text1 and instagram4 not in text2:
+        label7 = Label(root,text="Mail yada Passport yanlis",bg="#2D4F1E")
+        label7.place(relx=0.4,rely=0.35,relheight=0.1,relwidth=0.2)
+        label7 = Label(root,text="not: burayi eliye bilmeim",bg="#2D4F1E")
+        label7.place(relx=0.4,rely=0.5,relheight=0.1,relwidth=0.2)
+    
+    btnBack = Button(signUpFrame, text="BACK", bg="white", command=back)
+    btnBack.place(relx=0.05, rely=0.05, relwidth=0.2, relheight=0.2)
+
+    label1.config(bg="#2D4F1E")
+
+
+
+
+
+button1 = Button(root,text="login",bg="#1500FA",command=signUp)
+button1.place(relx=0.4,rely=0.45,relheight=0.1,relwidth=0.2)
+
+label1 = Label(root,bg="#808080")
+label1.place(relx=0.25,rely=0.1,relheight=0.5,relwidth=0.5)
+
+label2 = Label(root,text="Mail",bg="#808080",fg="red",font="30")
+label2.place(relx=0.4,rely=0.15,relheight=0.05,relwidth=0.2)
+
+label3 = Label(root,text="Passworld",bg="#808080",fg="red",font="30")
+label3.place(relx=0.4,rely=0.25,relheight=0.05,relwidth=0.2)
+
+entry1 = Entry(root,bg="black",fg="gold",font="30")
+entry1.place(relx=0.4,rely=0.2,relheight=0.05,relwidth=0.2)
+
+entry2 = Entry(root,bg="black",fg="gold",font="30")
+entry2.place(relx=0.4,rely=0.3,relheight=0.05,relwidth=0.2)
+
+    
+    
+
+
+
+ 
+
+        
+
+
+
+
+
+
+def login3():
+    label5.config(text="login")
+    label4.config(text="hesabin yoxsa kayit ol -->")
+    label4.config(bg="deepskyblue")
+    root.config(bg="deepskyblue")
+    btnSignUp.config(command=signUp1)
+    btnSignUp.config(text="signUp")
+    btnLogin.config(text="login")
+    btnLogin.config(command=login)
+
+
+def signUp1():
+    label5.config(text="singup")
+    label4.config(text="geri don -->")
+    label4.config(bg="darkgreen")
+    root.config(bg="darkgreen")
+    btnSignUp.config(command=login3)
+    btnSignUp.config(text="login")
+    btnLogin.config(text="signUp")
+    btnLogin.config(command=signUp)
+
+
+root.config(bg="deepskyblue")
+
+btnLogin = Button(root, text="Login",bg="#0800FF", font=("Comis Sans Ms", 25), command=login)
+btnLogin.place(relx=0.4, rely=0.45, relwidth=0.2, relheight=0.1)
+
+btnSignUp = Button(root, text="SignUp",bg="red", font=("Comis Sans Ms", 10), command=signUp1)
+btnSignUp.place(relx=0.6, rely=0.75, relwidth=0.1, relheight=0.05)
+
+label4 = Label(root,text="hesabin yoxsa kayit ol -->",bg="deepskyblue")
+label4.place(relx=0.3, rely=0.75, relwidth=0.3, relheight=0.05)
+
+label5 = Label(root,text="login",bg="#808080",font=("Comis Sans Ms", 20))
+label5.place(relx=0.35, rely=0.1, relwidth=0.3, relheight=0.05) 
+
+
+
+root.mainloop()
